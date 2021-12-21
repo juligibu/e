@@ -32,7 +32,7 @@
 	</div>
 
 	<!-- NAVBAR -->
-
+	
 	<header class="header">
 		<nav class="nav">
 			
@@ -56,7 +56,7 @@
 					<li><a href="proyectos.html">Proyectos</a></li>
 					<li><a href="empresa.html">Empresa</a></li>
 					<li><a href="preguntasfrecuentes.html">Preguntas Frecuentes</a></li>
-					<li><a href="contacto.html">Contacto</a></li>
+					<li><a href="index.html#contacto">Contacto</a></li>
 
 				</ul>
 				<span class="btn-menu"><i class="fas fa-bars"></i></span>
@@ -64,6 +64,57 @@
 		
 	</header>
 
+
+
+	<!-- ASIDE + PREGUNTAS FRECUENTES -->
+	
+	<div class="aside-preguntas-frecuentes">
+	
+	<!-- ASIDE -->
+
+	<div class="aside">
+		<div class="slide-contenedor">
+			<div class="miSlider fade">
+				<img src="images/imagen.jpg">
+			</div>
+			<div class="miSlider fade">
+				<img src="images/imagen2.jpg">
+			</div>
+			<div class="miSlider fade">
+				<img src="images/imagen3.jpg">
+			</div>
+			<div class="barras">
+				<span class="barra active" onclick="posicionSlide(1)"></span>
+				<span class="barra" onclick="posicionSlide(2)"></span>
+				<span class="barra" onclick="posicionSlide(3)"></span>
+			</div>		
+		</div>
+	</div>
+
+	<!-- PREGUNTAS FRECUENTES -->
+
+	<section class="preguntas">
+
+		<div class="container-titulo">
+			<h1 class="titulo"><a href="#"> PREGUNTAS FRECUENTES </a></h1>
+		</div>
+
+		<div class="preguntasfrecuentes">
+			<div class="pregunta">
+				<button id="pregunta" type="button" onclick="mostrarPregunta();" class="boton">¿Qué es la energía solar térmica?</button>
+				<p id="respuesta" onclick="dejarDeMostrarPregunta();">La Energía Solar Térmica consiste en el aprovechamiento de la energía del Sol para generar y acumular calor. Es una forma de energía LIMPIA, RENOVABLE y GRATIS.</p>
+			</div>
+			<div class="pregunta">
+				<button id="pregunta2" type="button" onclick="mostrarPregunta2();" class="boton">¿Para qué se puede utilizar?</button>
+				<p id="respuesta2" onclick="dejarDeMostrarPregunta2();">La Energía Solar Térmica se la usa principalmente para calentar agua y abastecernos del Agua Caliente Sanitaria que usamos en nuestras casas para ducharnos o lavar los platos.</p>
+			</div>
+
+		</div>
+
+	</section>
+
+	</div>
+	
 	<!-- FOOTER -->
 
 	<footer>
@@ -104,6 +155,68 @@
 	<!-- JAVASCRIPT -->
 
 	<script src="js/code.js"></script>
+
+	<script>
+
+		function mostrarPregunta() {
+			document.getElementById('pregunta').style.display = 'none';
+			document.getElementById('respuesta').style.display = 'block';
+		}
+
+		function dejarDeMostrarPregunta() {
+			document.getElementById('pregunta').style.display = 'block';
+			document.getElementById('respuesta').style.display = 'none';
+			
+		}
+
+		function mostrarPregunta2() {
+			document.getElementById('pregunta2').style.display = 'none';
+			document.getElementById('respuesta2').style.display = 'block';
+		}
+
+		function dejarDeMostrarPregunta2() {
+			document.getElementById('pregunta2').style.display = 'block';
+			document.getElementById('respuesta2').style.display = 'none';
+			
+		}
+
+		
+		function mostrarPregunta3() {
+			document.getElementById('pregunta3').style.display = 'none';
+			document.getElementById('respuesta3').style.display = 'block';
+		}
+
+		function dejarDeMostrarPregunta3() {
+			document.getElementById('pregunta3').style.display = 'block';
+			document.getElementById('respuesta3').style.display = 'none';
+			
+		}
+
+		
+		function mostrarPregunta4() {
+			document.getElementById('pregunta4').style.display = 'none';
+			document.getElementById('respuesta4').style.display = 'block';
+		}
+
+		function dejarDeMostrarPregunta4() {
+			document.getElementById('pregunta4').style.display = 'block';
+			document.getElementById('respuesta4').style.display = 'none';
+			
+		}
+
+		
+		function mostrarPregunta5() {
+			document.getElementById('pregunta5').style.display = 'none';
+			document.getElementById('respuesta5').style.display = 'block';
+		}
+
+		function dejarDeMostrarPregunta5() {
+			document.getElementById('pregunta5').style.display = 'block';
+			document.getElementById('respuesta5').style.display = 'none';
+			
+		}
+
+	</script>
 
 </body>
 </html>
