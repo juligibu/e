@@ -122,7 +122,7 @@
 
 .nav li:hover > ul {
     display: block;
-    background-color: rgba(14, 162, 231);
+    background-color: rgb(56, 185, 245);
 }
 
 /* NAV SCROLL */
@@ -162,14 +162,8 @@
 }
 
 .nav.nav.active ul {
-    margin: 0 20px;
     text-transform: uppercase;
     font-size: 12px;
-}
-
-.nav.active li ul li {
-    font-size: 8px;
-    height: 25px;
 }
 
 /* NAVBAR RESPONSIVE */
@@ -206,6 +200,7 @@
         min-width: 140px;
         line-height: 25px;
         border-radius: 1%;
+        background-color: rgba(76, 187, 221, 1);
         transition: all 0.2s ease-out;
     }
     
@@ -213,10 +208,54 @@
         font-size: 10px;
         height: 25px;
     }
-    
+
     .nav li:hover > ul {
         display: block;
-        background-color: rgba(76, 187, 221, 0.8);
+        background-color: rgba(76, 187, 221, 1);
+    }
+    
+    .nav.active {
+        background-color: rgba(76, 187, 221, 1);
+        box-shadow: 2px 2px 2px rgb(0, 0, 0, .2);
+        height: 50px;
+        transition: all 0.2s ease-out;
+    }
+    
+    .nav.active a>img {
+        width: 60px;
+        margin-top: 10px;
+    }
+    
+    .nav.active ul {
+        display: flex;
+        line-height: 50px;
+        list-style: none;
+    }
+
+    .nav.active li {
+        margin: 0 20px;
+        text-transform: uppercase;
+        font-size: 12px;
+    }
+
+    .nav.active li ul {
+        display: none;
+        position: absolute;
+        min-width: 140px;
+        line-height: 25px;
+        border-radius: 1%;
+        background-color: rgba(76, 187, 221, 1);
+        transition: all 0.2s ease-out;
+    }
+    
+    .nav.active li ul li {
+        font-size: 10px;
+        height: 25px;
+    }
+
+    .nav.active li:hover > ul {
+        display: block;
+        background-color: rgba(76, 187, 221, 1);
     }
 }
 
@@ -261,11 +300,6 @@
         color: #fff;
     }
 
-    .logo {
-        font-size: 20px;
-        padding-left: 35px;
-    }
-
     .nav li:hover > ul {
         display: none;
         background-color: rgba(14, 162, 231, 0.7);
@@ -284,12 +318,6 @@
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
-*{
-	margin:0;
-	padding:0;
-	box-sizing: border-box;
-}
 
 /* FOOTER */
 
@@ -318,7 +346,6 @@ ul{
 .footer-col h4, .link{
 	font-size: 18px;
 	color: #ffffff;
-	text-transform: capitalize;
 	margin-bottom: 35px;
 	font-weight: 500;
 	position: relative;
@@ -341,7 +368,6 @@ ul{
 }
 .footer-col ul li a, p{
 	font-size: 16px;
-	text-transform: capitalize;
 	color: #ffffff;
 	text-decoration: none;
 	font-weight: 300;
@@ -378,14 +404,14 @@ iframe {
 /* FOOTER RESPONSIVE */
 
 @media(max-width: 767px){
-  .footer-col{
-    width: 50%;
-    margin-bottom: 30px;
+    .footer-col{
+        width: 50%;
+        margin-bottom: 30px;
 }
 }
 @media(max-width: 574px){
-  .footer-col{
-    width: 100%;
+    .footer-col{
+        width: 100%;
 }
 }
 
@@ -393,7 +419,7 @@ iframe {
 
 /* CARROUSEL */
 
-.slide-contenedor{
+.slide-contenedor {
     max-width:100%;
     max-height: 100vh;
     width: 100%;
@@ -403,14 +429,14 @@ iframe {
     margin: auto;
 }
 
-.miSlider{
+.miSlider {
     display: none;
     transition: 2s;
     max-height: 100vh;
     margin-top: 70px;
 }
 
-.miSlider img{
+.miSlider img {
     width: 100%;
     max-height: 100vh;
     height: inherit;
@@ -419,7 +445,7 @@ iframe {
     transition: 2s;
 }
 
-.direcciones{
+.direcciones {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -430,18 +456,18 @@ iframe {
     font-size: 20px;
 }
 
-.direcciones button{
+.direcciones a {
     background-color: transparent;
     display: inline-block;
     padding: 20px;
 }
 
-.direcciones button:hover{
+.direcciones a:hover {
     background: rgba(0, 0, 0, .5);
     transition: .5s;
 }
 
-.barras{
+.barras {
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -450,7 +476,7 @@ iframe {
     margin-bottom:15px;
 }
 
-.barra{
+.barra {
     cursor: pointer;
     height:2px;
     width: 25px;
@@ -460,28 +486,30 @@ iframe {
     margin-left: 3px;
 }
 
-.active{
+.active {
     background-color: #3c9ae7;
 }
 
-.fade{
+.fade {
     animation-name: fade;
     animation-duration: .5s;    
 }
 
 @keyframes fade {
     from {opacity: .8;}
-    to{opacity:1;}
+    to {opacity:1;}
 }
 
 /* CARROUSEL RESPONSIVE */
 
-@media screen and (max-width: 952px) {
-    .miSlider{
+@media screen and (max-width: 960px) {
+   
+    .miSlider {
         display: none;
         transition: 2s;
         max-height: 100vh;
         margin-top: 50px;
+        transition: none;
     }
 }
 
@@ -489,15 +517,15 @@ iframe {
 
 .productos {
     width: 100%;
-    background-color: #37b9f531;
 }
 
 .titulo, .titulo a {
     text-align: center;
     padding: 30px;
-    font-size: 28px;
-    text-decoration: none;
+    padding-bottom: 0px;
+    font-size: 32px;
     color: #000;
+    text-decoration: none;
 }
 
 .titulo:hover, .titulo a:hover {
@@ -516,11 +544,16 @@ iframe {
     display: grid;
     grid-template-rows: 210px 210px;
     grid-template-areas: "image" "text";
-    border-radius: 15px;
+    border-radius: 10px;
     background: white;
     box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
     font-family: roboto;
     text-align: center;
+}
+
+.container-cards a {
+    text-decoration: none;
+    color: #000;
 }
 
 .card-image {
@@ -531,12 +564,58 @@ iframe {
     grid-area: text;
 }
 
-.card-image {
+.card-image1  {
+    grid-area: image;
+    background: url(../images/fotovoltaicos.jpg);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-size: cover;
+    border-bottom: 1px solid rgb(211, 209, 209);
+}
+
+.card-image2  {
+    grid-area: image;
+    background: url(../images/climatización.jpg);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-size: cover;
+    border-bottom: 1px solid rgb(211, 209, 209);
+}
+
+.card-image3  {
     grid-area: image;
     background: url(../images/imagen.jpg);
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     background-size: cover;
+    border-bottom: 1px solid rgb(211, 209, 209);
+}
+
+.card-image4  {
+    grid-area: image;
+    background: url(../images/aire_caliente_solar.jpg);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-size: cover;
+    border-bottom: 1px solid rgb(211, 209, 209);
+}
+
+.card-image5  {
+    grid-area: image;
+    background: url(../images/agua_caliente.jpg);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-size: cover;
+    border-bottom: 1px solid rgb(211, 209, 209);
+}
+
+.card-image6  {
+    grid-area: image;
+    background: url(../images/fotovoltaicos.jpg);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-size: cover;
+    border-bottom: 1px solid rgb(211, 209, 209);
 }
 
 .card-text {
@@ -572,6 +651,7 @@ iframe {
 /* RESPONSIVE PRODUCTOS */
 
 @media (max-width: 1300px) {
+   
     .container-cards {
         display: grid;
         grid-template-columns: 400px 400px;
@@ -598,7 +678,8 @@ iframe {
 .banner {
     width: 100%;
     height: 50vh;
-    background-image: url("../images/imagen.jpg");
+    background-image: url("../images/termo.jpg");
+    background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
 
@@ -608,7 +689,6 @@ iframe {
 
 .proyectos {
     width: 100%;
-    background-color: #37b9f531;
 }
 
 .proyectos h1 {
@@ -626,7 +706,7 @@ iframe {
     grid-template-columns: 450px 450px 450px ;
     grid-template-rows: auto;
     padding-top: 20px;
-    padding-bottom: 100px;
+    padding-bottom: 10px;
     justify-content: center;
     font-family: 'Quicksand', sans-serif;
 }
@@ -682,18 +762,22 @@ iframe {
 }
 
 .image__title {
-    font-size: 2em;
+    font-size: 1em;
     font-weight: bold;
 }
 
 .image__description {
-    font-size: 1.25em;
+    font-size: 1em;
     margin-top: 0.25em;
+    padding: 20px;
+    text-align: center;
+    color:rgba(243, 237, 237, 0.836);
 }
 
 /* RESPONSIVE PROYECTOS */
 
 @media (max-width: 1300px) {
+    
     .proyectos-contenedor {
         display: grid;
         grid-template-columns: 450px 450px;
@@ -724,6 +808,28 @@ iframe {
     padding-top: 70px;
     justify-content: center;
     height: 100%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.info-aside {
+    margin: 7px;
+    line-height: 1;
+    font-size: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.aside-productos .social-links a{
+    display: block;
+    height: 20px;
+    color: #3a3a3a;
+    line-height: 1;
+    transition: all 0.5s ease;
+}
+
+.aside-productos .social-links a i{
+    padding: 10px;
 }
 
 .aside {
@@ -731,10 +837,6 @@ iframe {
     border-right: 1px solid rgba(141, 140, 140, 0.3);
     padding: 15px;
     padding-top: 10px;
-}
-
-.productos-pagina {
-    background-color: #37b9f531;
 }
 
 .producto-aside {
@@ -757,13 +859,29 @@ iframe {
     border-bottom: 1px solid rgba(53, 52, 52, 0.541);
 }
 
-.footer-productos {
-    
+.slide-contenedor {
+    border-bottom: 1px solid rgba(53, 52, 52, 0.541);
+    transition: none;
+}
+
+.aside .miSlider {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    transition: none´;
+}
+
+.aside .miSlider img {
+    border-radius: 2%;
+}
+
+.aside .barras {
+    display: none;
 }
 
 /* PRODUCTOS HTML RESPONSIVE */
 
 @media (max-width: 1620px) {
+    
     .productos-pagina .container-cards {
         display: grid;
         grid-template-columns: 400px 400px;
@@ -774,7 +892,200 @@ iframe {
 }
 
 @media (max-width: 1160px) {
+    
     .productos-pagina .container-cards {
+        display: grid;
+        grid-template-columns: 400px;
+        padding-top: 20px;
+        justify-content: center;
+    }
+
+    .productos-pagina h1 {
+        padding-top: 50px;
+        padding-bottom: 0px;
+    }
+}
+
+@media (max-width: 960px) {
+    
+    .aside-productos {
+        padding-top: 50px;
+    }
+}
+
+@media (max-width: 670px){
+    
+    .aside {
+        display: none;
+    }
+
+    .aside-productos {
+        display: block;
+        padding-top: 50px;
+        justify-content: center;
+    }
+}
+
+/* SISTEMA FOTOVOLTAICO */
+
+.aside-fotovoltaico {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: auto;
+    padding-top: 70px;
+    justify-content: center;
+    height: 100%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.sistema-fotovoltaico {
+    padding-top: 20px;
+}
+
+.presentacion {
+    text-align: center;
+}
+
+.presentacion img {
+    width: 700px;
+}
+
+.sistema-total {
+    display: grid;
+    grid-template-columns: 270px 270px;
+    grid-template-rows: auto;
+    justify-content: left;
+    height: 100%;
+    margin: 20px;
+    text-align: left;
+}
+
+.sistema {
+    width: 250px;
+    height: 250px;
+    display: inline-block;
+    text-align: center;
+    background-color: #1fc5f865;
+}
+
+.sistema img {
+    width: 95%;
+    margin-top: 5px;
+}
+
+.sistema h4 {
+    padding: 5px;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+@media(max-width: 1260px){
+
+    .presentacion img {
+        width: 550px;
+    }
+
+}
+
+@media (max-width: 1070px) {
+
+    .presentacion img {
+        width: 550px;
+    }
+
+    .aside-fotovoltaico {
+        display: grid;
+        grid-template-columns: 250px 1fr;
+        grid-template-rows: auto;
+        padding-top: 70px;
+        justify-content: center;
+        height: 100%;
+
+    }
+
+}
+
+@media (max-width: 880px) {
+
+    .presentacion img {
+        width: 650px;
+    }
+
+    .aside-fotovoltaico {
+        display: block;
+    }
+
+    .aside-fotovoltaico .aside {
+        display: none;
+    }
+}
+
+@media (max-width: 800px) {
+
+    .presentacion img {
+        width: 600px;
+    }
+
+}
+
+@media (max-width: 750px) {
+
+    .presentacion img {
+        width: 600px;
+    }
+
+    .sistema-total {
+        display: grid;
+        grid-template-columns: 420px;
+        grid-template-rows: auto;
+        justify-content: center;
+        height: 100%;
+        margin: 20px;
+        text-align: center;
+    }
+
+    .sistema {
+        width: 400px;
+        height: 400px;
+        margin-bottom: 20px;
+    }
+    
+    .sistema h4 {
+        padding: 5px;
+        text-align: center;
+        font-size: 20px;
+    }
+    
+}
+
+/* PROYECTOS HTML */
+
+.aside-proyectos {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: auto;
+    padding-top: 70px;
+    justify-content: center;
+    height: 100%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+@media (max-width: 1605px) {
+    
+    .aside-proyectos .proyectos-contenedor {
+        display: grid;
+        grid-template-columns: 450px 450px;
+        padding-top: 20px;
+        padding-bottom: 100px;
+        justify-content: center;
+    }
+}
+
+@media(max-width: 1170px){
+
+    .aside-proyectos .proyectos-contenedor {
         display: grid;
         grid-template-columns: 400px;
         padding-top: 20px;
@@ -782,35 +1093,252 @@ iframe {
         justify-content: center;
     }
 
-    .aside-productos {
-        display: block;
+}
+
+@media (max-width: 960px) {
+    .aside-proyectos {
         padding-top: 50px;
+    }   
+}
+
+@media(max-width: 720px){
+
+    .aside-proyectos .proyectos-contenedor {
+        display: grid;
+        grid-template-columns: 400px;
+        padding-top: 20px;
         padding-bottom: 100px;
         justify-content: center;
     }
-    
-    .aside {
+
+    .aside-proyectos .aside {
         display: none;
     }
+
+    .aside-proyectos {
+        display: block;
+        padding-top: 50px;
+        justify-content: center;
+    }
+
 }
 
-/* CONTACTO */
+/* EMPRESA HTML */
+
+.aside-mision-vision {
+    display: grid;
+    grid-template-columns: .80fr 1fr;
+    grid-template-rows: auto;
+    padding-top: 70px;
+    justify-content: center;
+    height: 100%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.asidee {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.asidee img {
+    padding: 20px;
+    width: 65%;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(105, 105, 105, 0.678);
+}
+
+.mision-vision {
+    margin: 10px;
+    margin-top: 0;
+}
+
+.mision-vision h1 {
+    margin: 10px;
+}
+
+.asidee h2 {
+    width   : 100%;   
+    position: relative;
+    z-index : 1;
+    background-color: #f5f5f5;
+    margin: 10px auto;
+    font-size: 25px;
+    color: #24262b;
+    line-height: 1;
+}
+  
+.asidee h2:before {
+    content : "";
+    position: absolute;
+    right    : 0;
+    left     : 17%;
+    height: 40px;
+    width   : 66%;
+    border-bottom: 1px solid rgba(105, 105, 105, 0.678);
+}
+
+.asidee h2:last-child {
+    padding-bottom: 70px;
+}
+
+/* PREGUNTAS FRECUENTES */
+
+.aside-preguntas-frecuentes {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: auto;
+    padding-top: 70px;
+    justify-content: center;
+    height: 100%;
+}
+
+.preguntas {
+    text-align: center;
+}
+
+.preguntasfrecuentes {
+    margin: 20px;
+    background-color: rgba(221, 214, 214, 0.11);
+    border: 1px solid rgba(43, 43, 43, 0.158);
+}
+
+.pregunta {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.boton:hover {
+    background-color: rgba(211, 208, 208, 0.329);
+}
+
+.pregunta:first-child {
+    padding-top: 20px;
+}
+
+.pregunta:last-child {
+    padding-bottom: 20px;
+}
+
+.boton {
+    background-color: rgba(255, 255, 255, 0.829);
+    padding: 10px;
+    display: flex;
+    width: 100%;
+    font-size: 17px;
+    font-family: 'Helvetica';
+    color: rgb(78, 78, 78);
+    text-transform: uppercase;
+    border: 1px solid rgba(43, 43, 43, 0.158);
+}
+
+.preguntasfrecuentes p {
+    background-color: rgba(211, 208, 208, 0.329);
+    padding: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    width: 100%;
+    font-size: 17px;
+    font-family: 'Helvetica';
+    color: rgb(78, 78, 78);
+    text-transform: uppercase;
+    border: 1px solid rgba(43, 43, 43, 0.158);
+    border-top: none;
+    text-align: left;
+}
+
+/* PREGUNTAS FRECUENTES */
+
+.aside-preguntas-frecuentes {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: auto;
+    padding-top: 70px;
+    justify-content: center;
+    height: 100%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.preguntasfrecuentes {
+    background-color: rgba(221, 214, 214, 0.11);
+    border: 1px solid rgba(43, 43, 43, 0.158);
+    margin-right: 15%;
+    margin-left: 15%;
+    margin-bottom: 20px;
+}
+
+.pregunta {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.boton:hover {
+    background-color: rgba(211, 208, 208, 0.329);
+}
+
+.pregunta:first-child {
+    padding-top: 20px;
+}
+
+.pregunta:last-child {
+    padding-bottom: 20px;
+}
+
+.boton {
+    background-color: rgba(255, 255, 255, 0.829);
+    padding: 10px;
+    display: flex;
+    width: 100%;
+    font-size: 17px;
+    font-family: 'Helvetica';
+    color: rgb(78, 78, 78);
+    text-transform: uppercase;
+    border: 1px solid rgba(43, 43, 43, 0.158);
+    text-align: left;
+}
+
+.preguntasfrecuentes p {
+    background-color: rgba(211, 208, 208, 0.329);
+    padding: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    display: flex;
+    width: 100%;
+    font-size: 17px;
+    font-family: 'Helvetica';
+    color: rgb(78, 78, 78);
+    text-transform: uppercase;
+    border: 1px solid rgba(43, 43, 43, 0.158);
+    text-align: left;
+}
+
+#respuesta, #respuesta2 {
+    display: none;
+}
+
+/* CONTACTO HTML */
 
 /* FORMULARIO */
 
+#contacto {
+    width: 100%;
+    height: 50px;
+}
+
 .formulario{
     max-width:100%;
-    max-height: 100vh;
-    height:69vh;
     position: relative;
     overflow: hidden;
-    background-color: #37b9f531;
+    text-align: center;
+    background-color: #3c9ae78c;
+    display: flex;
+    justify-content: center;
 }
 
 .form {
     max-height: 100vh;
-    margin-top: 70px;
-    text-align: left;
     padding: 25px;
 }
 
@@ -850,3 +1378,42 @@ iframe {
     font-weight: 800;
     margin-top: 20px;
 }
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    justify-content: center;
+    align-content: center;
+    grid-gap: 10px;
+    height: 100vh;
+  }
+  
+  .grid img {
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+  }
+  
+  #lightbox {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: none;
+  }
+  
+  #lightbox.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+    padding: 4px;
+    background-color: rgb(110, 193, 226);
+    border: 2px solid white;
+  }
