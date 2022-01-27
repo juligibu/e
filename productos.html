@@ -16,7 +16,6 @@
     <script src="https://kit.fontawesome.com/7e5b2d153f.js" crossorigin="anonymous"></script>
 	
 	<title> ESBA </title>
-
 </head>
 
 <body>
@@ -61,7 +60,6 @@
 				</ul>
 				<span class="btn-menu"><i class="fas fa-bars"></i></span>
 		</nav>
-		
 	</header>
 
 	<!-- ASIDE + PRODUCTOS -->
@@ -95,6 +93,15 @@
 						<span class="barra" onclick="posicionSlide(3)"></span>
 					</div>		
 			</div>
+			<div class="info-aside">
+				<p> Energía Solar Buenos Aires</p><br>
+				<p> Ruta 3 Km 77, Cañuelas</p>
+			</div>
+			<div class="social-links">
+						<a href="https://www.facebook.com/energiasolarbuenosaires/" target="_blank"><i class="fab fa-facebook-f">¡Encontranos en Facebook!</i></a><br>
+						<a href="https://www.instagram.com/esba_bs.as/" target="_blank"><i class="fab fa-instagram">¡Encontranos en Instagram!</i></a><br>
+						<a href="https://api.whatsapp.com/send?phone=541136045362&app=facebook&entry_point=page_cta&fbclid=IwAR1W47JprC_zGMrHFOdajKhV21lA6VaUzRlTKSFXgNdnEcrqT1JtAM2bXHs" target="_blank"><i class="fab fa-whatsapp">Comunicate por Whatsapp</i></a>
+			</div>
 		</div>
 
 	<!-- PRODUCTOS -->
@@ -107,7 +114,7 @@
 
 			<div class="container-cards" id="container-cards">
 			
-				<div id="producto1" class="card" onclick="dejarDeMostrarProductos(),producto1()">
+				<div class="card">
 					<div class="card-image1"></div>
 					<div class="card-text">
 					<h2>Post One</h2>
@@ -115,7 +122,7 @@
 					</div>
 				</div>
 
-				<div id="producto2" class="card" onclick="dejarDeMostrarProductos()">
+				<div class="card">
 					<div class="card-image2"></div>
 					<div class="card-text">
 					<h2>Post One</h2>
@@ -123,7 +130,7 @@
 					</div>
 				</div>
 
-				<div id="producto3" class="card" onclick="dejarDeMostrarProductos()">
+				<div class="card">
 					<div class="card-image3"></div>
 					<div class="card-text">
 					<h2>Post One</h2>
@@ -131,7 +138,7 @@
 					</div>
 				</div>
 
-				<div id="producto4" class="card" onclick="dejarDeMostrarProductos()">
+				<div class="card">
 					<div class="card-image4"></div>
 					<div class="card-text">
 					<h2>Post One</h2>
@@ -139,7 +146,7 @@
 					</div>
 				</div>
 
-				<div id="producto5" class="card" onclick="dejarDeMostrarProductos()">
+				<div class="card">
 					<div class="card-image5"></div>
 					<div class="card-text">
 					<h2>Post One</h2>
@@ -147,7 +154,8 @@
 					</div>
 				</div>
 				
-				<div id="producto6" class="card" onclick="dejarDeMostrarProductos()">
+				
+				<div class="card">
 					<div class="card-image6"></div>
 					<div class="card-text">
 					<h2>Post One</h2>
@@ -156,12 +164,6 @@
 				</div>
 
 			</div>
-
-			<div id="infoProducto1">
-				<img src="images/fotovoltaicos.jpg" alt="" width="100px" height="100px" onclick="mostrarProductos(), producto12">
-				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus blanditiis laudantium deserunt nemo. Inventore adipisci blanditiis praesentium illo perferendis iste recusandae quos, nemo id ipsa cum voluptas velit? Commodi, eveniet!</p>
-			</div>
-
 		</section>
 
 	</div>
@@ -205,36 +207,7 @@
 
 	<!-- JAVASCRIPT -->
 
-	<style>
-
-	#infoProducto1 {
-		display: none;
-	}
-
-	</style>
-
 	<script src="js/code.js"></script>
-
-	<script>
-
-	function dejarDeMostrarProductos() {
-		document.getElementById('container-cards').style.display = 'none';
-	}
-
-	function mostrarProductos() {
-		document.getElementById('container-cards').style.display = 'grid';
-	}
-
-
-	function producto1() {
-		document.getElementById('infoProducto1').style.display = 'block';
-	}
-
-	function producto12() {
-		document.getElementById('infoProducto1').style.display = 'none';
-	}
-
-	</script>
 
 </body>
 </html>
