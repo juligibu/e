@@ -4,7 +4,7 @@ const nav = document.querySelector('.nav')
 window.addEventListener('scroll', fixNav)
 
 function fixNav() {
-    if(window.scrollY > nav.offsetHeight + 30 && window.screen.width > 850) {
+    if(window.scrollY > nav.offsetHeight + 30 && window.screen.width > 880) {
         nav.classList.add('active')
     }else {
         nav.classList.remove('active')
@@ -68,3 +68,31 @@ function muestraSlides(n){
     barras[indice-1].className += ' active';
 
 }
+
+// PRODUCTOS
+
+const lightbox = document.createElement('div')
+lightbox.id = 'lightbox'
+document.body.appendChild(lightbox)
+
+const images = document.querySelectorAll('img')
+images.forEach(image => {
+  image.addEventListener('click', e => {
+    lightbox.classList.add('active')
+    const content = document.createElement('p')
+    const img = document.createElement('img')
+    img.src = image.src
+    content.class = p.texto
+    while (lightbox.firstChild) {
+      lightbox.removeChild(lightbox.firstChild)
+    }
+    lightbox.appendChild(content)
+    lightbox.appendChild(img)
+    
+  })
+})
+
+lightbox.addEventListener('click', e => {
+  if (e.target !== e.currentTarget) return
+  lightbox.classList.remove('active')
+})
